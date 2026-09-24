@@ -1,0 +1,6 @@
+{
+  "name": "PRJ 287 Rake Allocation Engine - Solver Core & CP-SAT Exact Repair",
+  "description": "Foundational Solver Core and Exact Repair module for Stochastic Rake Allocation using Large-Neighbourhood Search (LNS) and OR-Tools CP-SAT.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
