@@ -2,17 +2,28 @@
 
 > **PRJ_287 · CSE7102 Mini Project · B.Tech Computer Science & Engineering**
 
-An AI-driven stochastic railway freight-rake scheduling framework that combines **probabilistic demand forecasting, learned Large-Neighbourhood Search (LNS), exact CP-SAT optimization, and a verified natural-language constraint interface** to improve the utilization of limited railway freight rakes.
+An AI-driven railway freight-rake scheduling research framework combining
+probabilistic demand forecasting, learned Large-Neighbourhood Search (LNS),
+Graph Neural Networks, and exact CP-SAT optimization to study how limited
+railway freight rakes can be allocated under operational constraints and
+uncertain demand.
 
-## 📌 Overview
+[![Status](https://img.shields.io/badge/status-under--development-orange)](#project-status)
+[![Frontend](https://img.shields.io/badge/frontend-React-blue)](#technology-stack)
+[![Solver](https://img.shields.io/badge/solver-CP--SAT%20%2B%20Rust-red)](#technology-stack)
+[![Project](https://img.shields.io/badge/project-PRJ__287-purple)](#project-scope)
 
-Railway freight scheduling involves allocating a limited pool of indivisible and commodity-specific rakes to customer freight demands while considering network capacity, terminal operations, rake availability, servicing requirements, maintenance windows, and uncertain future demand.
+## Overview
 
-A rake is treated as a complete coupled set of freight wagons operated as a single unit. Every hour a rake spends idle or travelling empty represents capacity that cannot be recovered.
+Railway freight scheduling involves allocating a limited pool of
+indivisible and commodity-specific rakes to freight demands while
+respecting network capacity, terminal operations, rake availability,
+servicing requirements, maintenance windows, and uncertain future demand.
 
-The project addresses this problem by integrating **forecasting and scheduling** rather than treating them as independent tasks.
-
-The proposed system follows a strict separation of authority:
+The central research question is whether a learned neighbourhood-selection
+policy can make Large-Neighbourhood Search more effective than a
+handcrafted destroy-selection strategy, while retaining exact CP-SAT repair
+for feasibility.
 
 > **Language specifies → Verifier validates → Solver decides → Data grounds**
 
@@ -549,28 +560,28 @@ learned-railway-rake-scheduling/
 
 ## 🚧 Project Status
 
-**Status: Under Development**
+**Status: Under Development — Alpha Prototype**
 
-### Development Checklist
+The `alpha` branch currently contains the working application and solver-core
+prototype. The repository is being developed incrementally toward the full
+research architecture described in this README.
 
-- [ ] Parametric instance generator
-- [ ] Time-space network model
-- [ ] Greedy baseline
-- [ ] CP-SAT optimization model
-- [ ] Probabilistic forecasting
-- [ ] Handcrafted LNS
+### Current Focus
+
+- [x] Initial application interface
+- [x] Solver-core integration
+- [x] Project configuration and development environment
+- [x] Initial CP-SAT / scheduling implementation
+- [ ] Parametric railway instance generator
+- [ ] Complete time-space network model
+- [ ] Handcrafted LNS baseline
 - [ ] GNN neighbourhood selector
 - [ ] GNN training pipeline
+- [ ] Probabilistic forecasting
 - [ ] Rolling-horizon optimization
-- [ ] Natural-language constraint compiler
-- [ ] Constraint verification
-- [ ] MCP server
-- [ ] Backend orchestration
-- [ ] Frontend interface
-- [ ] Replay simulator
+- [ ] Constraint verification pipeline
 - [ ] Benchmark evaluation
 - [ ] Ablation study
-- [ ] Final documentation
 
 ## ⚠️ Limitations
 
