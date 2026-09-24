@@ -1,0 +1,21 @@
+[package]
+name = "prj287_rake_allocation_engine"
+version = "0.1.0"
+edition = "2021"
+authors = ["PRJ 287 Operations Research Team"]
+description = "Foundational Solver Core and Exact Repair module for Stochastic Rake Allocation using Large-Neighbourhood Search (LNS) and OR-Tools CP-SAT"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rand = "0.8"
+thiserror = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+
+[lib]
+name = "prj287_rake_allocation_engine"
+path = "src/lib.rs"
+
+[[bin]]
+name = "prj287_cli"
+path = "src/main.rs"
