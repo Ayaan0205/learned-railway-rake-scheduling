@@ -114,6 +114,7 @@ export interface DestroyedFragment {
   destroyed_arc_ids: number[];
   unassigned_demand_ids: number[];
   frozen_demand_ids: number[];
+  destroy_meta?: string;
 }
 
 export interface IncumbentSchedule {
@@ -145,6 +146,7 @@ export interface LnsIterationLog {
   temperature: number;
   score_breakdown: ObjectiveScore;
   solve_duration_ms: number;
+  destroy_meta?: string;
 }
 
 export interface TerminalMeta {
